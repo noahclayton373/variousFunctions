@@ -17,3 +17,5 @@ Imports:
     tidyr
 Suggests:
     ggplot2
+URL: https://github.com/noahclayton373/variousFunctions
+BugReports: https://github.com/noahclayton373/variousFunctions/issues
