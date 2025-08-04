@@ -1,0 +1,19 @@
+Package: variousFunctions
+Title: Various Functions That I Might Use During My PhD
+Version: 0.0.0.9000
+Authors@R: 
+    person("Noah", "Clayton", , "clayton.n@wustl.edu", role = c("aut", "cre"))
+Description: A collection of miscellaneous functions that will likely be useful
+    for different projects. First of these functions includes automatically
+    processing the data exported in a LICOR file.
+License: `use_mit_license()`, `use_gpl3_license()` or friends to pick a
+    license
+Encoding: UTF-8
+Roxygen: list(markdown = TRUE)
+RoxygenNote: 7.3.2
+Imports:
+    readr,
+    dplyr,
+    tidyr
+Suggests:
+    ggplot2
