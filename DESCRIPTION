@@ -1,6 +1,6 @@
 Package: variousFunctions
 Title: Various Functions That I Might Use During My PhD
-Version: 0.0.0.9001
+Version: 0.0.0.9000
 Authors@R: 
     person("Noah", "Clayton", , "clayton.n@wustl.edu", role = c("aut", "cre"))
 Description: A collection of miscellaneous functions that will likely be useful
