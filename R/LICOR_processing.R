@@ -3,19 +3,30 @@
 #' Removes all the extra data at the top of CSV regarding LI-COR conditions.
 #' Moves the column names from the middle of the dataset to the top.
 #'
-#' @param dat A datafile called "dat" --> the raw LI-COR data loaded as a CSV
+#' @param file A data frame that contains the raw LI-COR data loaded from a CSV
 #' @return A cleaned up version of the data
 #' @export
-RAW_file_cleanup <- function(dat) {
+RAW_file_cleanup <- function(file) {
   # first remove the top 11 rows
-  dat <- dat[13:nrow(dat),]
+  file <- file[13:nrow(file),]
 
   # remove the second row
-  dat <- dat[c(1, 3:nrow(dat)), ]
+  file <- file[c(1, 3:nrow(file)), ]
 
-  row_names <- as.character(dat[1, ])
-  names(dat) <- row_names
+  row_names <- as.character(file[1, ])
+  names(file) <- row_names
 
   # remove the repeat first row
-  dat <- dat[2:nrow(dat), ]
+  dat <- file[2:nrow(file), ]
 }
+
+
+#' Calculate basic summary statistics for LI-COR parameters
+#'
+#' Computes mean, standard deviation, and standard error for key LI-COR
+#' parameters, A, iWUE, PhiPS2, gsw, E, Ci, and ETR.
+#'
+#' @param dat A data frame that contains LI-COR measurements and necessary
+#' identifying information.
+#' @return A data frame that holds the calculated statistics for plotting
+#' @export
