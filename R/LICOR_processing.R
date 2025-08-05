@@ -19,14 +19,3 @@ RAW_file_cleanup <- function(file) {
   # remove the repeat first row
   dat <- file[2:nrow(file), ]
 }
-
-
-#' Calculate basic summary statistics for LI-COR parameters
-#'
-#' Computes mean, standard deviation, and standard error for key LI-COR
-#' parameters, A, iWUE, PhiPS2, gsw, E, Ci, and ETR.
-#'
-#' @param dat A data frame that contains LI-COR measurements and necessary
-#' identifying information.
-#' @return A data frame that holds the calculated statistics for plotting
-#' @export
